@@ -1,0 +1,26 @@
+Ejercicio E2E
+
+1. Hallazgos de la PRUEBA 
+
+La ejecución de la prueba fue exitosa, completando un escenario end-to-end del flujo de compra indicado sin presentar fallos funcionales, se valido correctamente el proceso completo:
+    
+	- Inicio de sesión
+	- Selección de productos
+	- Acceso al carrito
+	- Ingreso de información para formulario de compra
+	- Validar mensaje para finalizar compra
+
+El tiempo total de ejecución fue de aproximadamente 48 segundos, adecuado para una prueba funcional automatizada de este tipo, Durante la ejecución no se evidenciaron errores en la interacción con la aplicación ni fallos al localizar elementos
+
+
+2. Conclusiones
+
+La prueba automatizada fu exitosa, se valido correctamente el flujo de compra de extremo a extremo.
+
+El sistema demostró estabilidad funcional durante toda la ejecución y no se identificaron defectos en el comportamiento esperado.
+
+Se presentan novedades al generar el reporte de serenity, no cargan los css de lo que se estuvo revisando puede deberse al tema de versiones que se esta utilizando para realizar la prueba
+
+
+ 
+

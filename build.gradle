@@ -1,0 +1,70 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id 'eclipse'
+    id 'net.serenity-bdd.serenity-gradle-plugin' version '3.9.8'
+}
+
+group = 'com.nttdata'
+version = '1.0-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    serenityVersion = '3.9.8'
+    cucumberVersion = '7.15.0'
+    junitVersion = '4.13.2'
+    lombokVersion = '1.18.32'
+}
+
+dependencies {
+
+    // Serenity
+    implementation "net.serenity-bdd:serenity-core:${serenityVersion}"
+    implementation "net.serenity-bdd:serenity-ensure:${serenityVersion}"
+
+    // Screenplay
+    implementation "net.serenity-bdd:serenity-screenplay:${serenityVersion}"
+    implementation "net.serenity-bdd:serenity-screenplay-webdriver:${serenityVersion}"
+
+    // Cucumber + Serenity
+    implementation "net.serenity-bdd:serenity-cucumber:${serenityVersion}"
+    implementation "io.cucumber:cucumber-java:${cucumberVersion}"
+    implementation "io.cucumber:cucumber-junit:${cucumberVersion}"
+
+    // JUnit 4
+    implementation "junit:junit:${junitVersion}"
+
+    // Selenium
+    implementation "org.seleniumhq.selenium:selenium-java:4.18.1"
+
+    // JSON
+    implementation "com.fasterxml.jackson.core:jackson-databind:2.17.0"
+
+    // CSV
+    implementation "org.apache.commons:commons-csv:1.11.0"
+
+
+}
+
+test {
+    useJUnit()
+    systemProperties System.getProperties()
+
+}
+
+serenity {
+    testRoot = "com.nttdata.runners"
+    requirementsDir = "src/test/resources/features"
+
+}
+
+test.finalizedBy('aggregate')
