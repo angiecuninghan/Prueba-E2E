@@ -10,17 +10,15 @@ La ejecución de la prueba fue exitosa, completando un escenario end-to-end del 
 	- Ingreso de información para formulario de compra
 	- Validar mensaje para finalizar compra
 
-El tiempo total de ejecución fue de aproximadamente 48 segundos, adecuado para una prueba funcional automatizada de este tipo, Durante la ejecución no se evidenciaron errores en la interacción con la aplicación ni fallos al localizar elementos
+El tiempo total de ejecución fue de 11.14 segundos, adecuado para una prueba funcional automatizada de este tipo, Durante la ejecución no se evidenciaron errores en la interacción con la aplicación ni fallos al localizar elementos, El reporte se genero correctamente, con capturas en cada paso del flujo, lo que nos permitió una trazabilidad visual completa de la prueba
 
 
 2. Conclusiones
 
-La prueba automatizada fu exitosa, se valido correctamente el flujo de compra de extremo a extremo.
+La prueba automatizada fu exitosa, se valido correctamente el flujo de compra de extremo a extremo, confirmando que funcionen todos los pasos del proceso
 
 El sistema demostró estabilidad funcional durante toda la ejecución y no se identificaron defectos en el comportamiento esperado.
 
-Se presentan novedades al generar el reporte de serenity, no cargan los css de lo que se estuvo revisando puede deberse al tema de versiones que se esta utilizando para realizar la prueba
-
-
+Se debe tener en cuenta la compatibilidad de versiones al configurar el proyecto, dado que hay algunas combinaciones dentro de las versiones del plugin de Serenity BDD con Gradle que pueden generar inconvenientes al momento de producir los reportes, afectando la visualización correcta de los mismos. 
  
 

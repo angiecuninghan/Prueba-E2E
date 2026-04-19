@@ -20,8 +20,8 @@ public class AddProducts implements Task {
         actor.attemptsTo(
                 WaitUntil.the(ProductsInterface.PRODUCT_1, isVisible()).forNoMoreThan(10).seconds(),
                 Click.on(ProductsInterface.PRODUCT_1),
-                Click.on(ProductsInterface.PRODUCT_2),
-                Click.on(ProductsInterface.CART)
+                Click.on(ProductsInterface.PRODUCT_2)
+
         );
     }
 
